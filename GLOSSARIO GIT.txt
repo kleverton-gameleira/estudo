@@ -9,3 +9,6 @@ git init = este comando inicia um repositorio git no diretorio selecionado para 
 git status = este comando retorna qual é o status dos arquivos do diretorio, se estao ou nao sendo rastreados
 
 git add nome_arquivo.extensao  = este comando adiciona o arquivo para area de rastreo, apartir de agora as mudanças no arquivos seram rastreadas
+
+git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona todos os arquivos contidos no diretorio na area de rastreio de uma vez só
+
