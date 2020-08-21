@@ -12,3 +12,5 @@ git add nome_arquivo.extensao  = este comando adiciona o arquivo para area de ra
 
 git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona todos os arquivos contidos no diretorio na area de rastreio de uma vez só
 
+git commit -m 'mensagem que identifica o commit que acabou de ser realizado'  = este comando grava no repositorio do git todas as alterações que foram feitas no arquivo
+
