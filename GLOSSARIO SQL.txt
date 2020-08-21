@@ -1,0 +1,193 @@
+******* COMANDOS PARA CRIACAO DE USUARIOS PARA ACESSO AO BANCO DE DADOS
+	
+- create user nome_usuario@'%' identified by 'senha_usuario'; = comando para a criacao de um novo usuario para acesar SGBD.
+	
+- grant all privileges on *.* to nome_usuario@'%' with grant option; = comando para conceder permissoes ao usuario criando
+								       no SGBD.
+
+- revoke all on *.* from nome_usuario; = este comando retira todas as permissoes concedidas ao usuario no SGBD
+
+
+********* TIPOS DE DADOS NO MySQL
+
+--- TEXTO (CHAR/VARCHAR/TEXT/BLOB)
+
+--- NUMERICOS(TINYINT/SMALLINT/MEDIUMINT/INT/BIGINT/FLOAT/DECIMAL)
+
+--- DATA/HORA(DATE(YYYY-MM-DD)/DATETIME(YYYY-MM-DD HH:MM:SS)/TIME(HH:MM:SS))
+
+
+
+SHOW DATABASES;  = comando para exibir todos os bancos de dados criados no servidor ate o momento
+
+USE NOME_BANCO; = comando para selecionar um banco existente no servidor para trabalhar
+
+SELECT DATABASE();  = este comando monstra qual é o banco de dados que esta selecionado no momento
+
+DROP DATABASE NOME_BANCO; = este comando exclui um banco de dados do servidor 
+
+DROP TABLE NOME_TABELA; = este comando exclui uma tabela existente no banco de dados selecionado
+
+SHOW TABLES;  = comando para exibir todas as tabelas que existem no banco seleciodo
+
+DESCRIBE/DESC NOME_TABELA; = comando para mostrar a estrutura da tabela especificada
+
+CREATE DATABASE IF NOT EXISTS NOME_BANCO; = comando para criar um banco de dados
+
+CREATE TABLE IF NOT EXISTS NOME_TABELA(  = comando para criar uma tabela
+	nome_campo tipo,
+	nome_campo tipo,
+	nome_campo tipo
+);
+
+auto_.increment=100; = esta clausula incrementa o valor do campo automaticamente 
+
+********* ALTERANLDO ESTRUTURA DA TABELA *************
+
+
+ALTER TABLE NOME_TABELA DROP COLUMN NOME_COLUNA; = este comando exclui uma coluna da tabela Obs:. se nao for chave estrangeira 
+
+ALTER TABLE NOME_TABELA ADD COLUMN NOME_COLUNA TIPO_DADO [COMSTRAINT] [AFTER/BEFORE] NOME_COLUNA; =este comando cria uma coluna na tabela
+
+ALTER TABLE NOME_TABELA ADD CONSTRAINT FK_NOME FOREIGN KEY (CAMPO) REFERENCES NOME_TABELA(CAMPO);
+
+ALTER TABLE NOME_TABELA ALTER COLUMN NOME_COLUNA TIPO_DADO; = este comando altera o tipo do dado da coluna
+
+ALTER TABLE NOME_TABELA ADD PRIMARY KEY(CAMPO); = este comando adiciona uma chave primaria no campo especificado
+
+
+RENAME TABLE nome_atual TO novo_nome; = este comando renomeia a tabela;
+
+ALTER TABLE nome_tabela MODIFY COLUMN nome_campo/coluna TIPO_DADO DEFAULT 'valor_padrao'; = este comando adiciona um valor padrao no campo caso nada seja inserido no
+											    campo quando o registro for criado.
+
+*********** COMANDOS DE SELECAO *******************
+
+EXPLAIN SELECT * FROM nome_tabela = este comando select precedido de uma clausula EXPLAIN retorna uma linha com as informacoes acerca do select 
+
+SELECT * FROM NOME_TABELA = este comando retorna todos os dados de todas as colunas da tabele, ou seja, a tabela inteira.
+
+SELECT nome_campo FROM nome_tabela = este comando retorna todos os dados da coluna especificada
+
+SELECT nome_campo as apelido ,nome_campo as apelido FROM nome_campo = este comando retorna os dados das colunas especificadas mostrando o tag da coluna como o apelido
+
+SELECT nome_campo FROM nome_tabela ORDER BY nome_campo ASC/DESC = este comando ordena o resultado da busca tomando como base para a ordenacao o campo especificado em ORDER BY
+
+SELECT nome_campo/* FROM nome_tabela WHERE nome_campo = valor/'valor'; = este comando retorna os valores para os campos solicitados com base na clausula where.
+
+SELECT nome_campo/* FROM nome_tabela WHERE nome_campo (<,>,=,) valor AND/OR/NOT nome_campo (<,>,=,); = este comando retorna os dados de acordo com as clausulas
+
+SELECT nome_campo AS novo_nome_coluna FROM nome_tabela; = este comando coloca um apelido na legenda do campo na consulta.
+
+SELECT MAX(nome_campo) AS 'nome desejado' FROM nome_tabela; = este comando mostra qual e o maior valor dos registros da coluna especificada.
+
+SELETC MIN(nome_campo) AS 'nome desejado' FROM nome_tabela; = este comando mostra qual e o menor valor dos registros da coluna especificada.
+
+SELECT COUNT(*) FROM nome_tabela; = este comando retorna a quantidade de registros que a tabela contem
+
+SELECT COUNT(DISTINCT nome_campo) AS 'nome desejado' FROM nome_tabela; = este comando retorna a quantidade de registros na tabela cujo o valor do campo especificado
+									 seja diferente.
+
+SELECT AVG(nome_campo) FROM nome_tabela; = este comando retorna a media dos valores contidos nos campos da coluna especificada
+
+SELECT SUM(nome_campo) FROM nome_tabela; = este comando retorna a soma de todos os valores contidos nos campos da coluna especificada.
+
+SELECT nome_campo AS novo_desejado FROM nome_tabela WHERE nome_campo BETWEEN valor_min AND valor_max; = este comando retorna os dados da coluna desejada que se encontram
+													enttre o intervalo dos numeros especificados minimo e maximo.
+
+SELECT nome_campo FROM nome_tabela WHERE nome_campo LIKE 'C%'; = este comando retorna todos os dados da coluna especificada cujo o valor se inicia com o caracter passado
+								 no parametro.
+
+SELECT nome_campo FROM nome_tabela WHERE nome_campo NOT LIKE 'C%'; este comando retorna todos os dados da coluna especificada cujo o valor nao inicia com o caracter
+								   passado no parametro.
+
+
+SELECT CONCAT(nome_campo,' ',nome_campo) AS tag_coluna FROM nome_tabela; = este comando retorna as strings concatenadas.
+
+
+SELECT SUM/MAX/MIN/COUNT(nome_campo) FROM nome_tabela GROUP BY nome_campo; = este comando retorna os dados selecionados e retorna o resulta agrupado.
+
+SELECT SUM/MAX/MIN/COUNT(nome_campo) FROM nome_tabela GROUP BY nome_campo HAVING nome_campo = 'valor'; = este comando retorna os dados agrupados pelo campo especificado
+													 se a clausula HAVING for satisfeita.
+
+********** TRABALHANDO COM JOINS ***********
+
+SELECT nome_campo FROM nome_tabela_01 INNER JOIN nome_tabela_02 ON fk_tabela_01 = pk_tabela_02; = este comando retorna os dados de duas ou mais tabela com base
+												  no relacionamento das chaves primaria e estrangeira das tabelas.
+
+
+SELECT nome_campo FROM nome_tabela1 AS TB1 INNER JOIN nome_tabela2 AS TB2 ON TB1.fk = TB2.pk; comando join com alias
+
+
+
+SELECT nome_campo FROM nome_tabela1 AS TB1 INNER JOIN nome_tabela2 AS TB2 ON TB1.fk = TB2.pk WHERE nome_campo = valor; comando join com alias e clausula where.
+
+SELECT TB1.nome_campo,TB1.nome_campo,TB2.nome_campo FROM nome_tabela as TB1 LEFT JOIN nome_tabela as TB2 ON TB1.fk = TB2.pk; = este comando retorna todos os dados da
+	tabela TB1 independente de ter dados na tabela da TB2
+
+SELECT TB1.nome_campo,TB1.nome_campo,TB2.nome_campo FROM nome_tabela as TB1 RIGHT JOIN nome_tabela as TB2 ON TB1.fk = TB2.pk; = este comando retorna todos os dados da
+	tabela TB2 independente de ter dados na tabela da TB1
+
+
+SELECT TB1.nome_campo,TB1.nome_campo,TB2.nome_campo FROM nome)tabela AS TB1 LEFT JOIN nome_tabela as TB2 ON TB1.fk = TB2.pk WHERE TB1.pk IS NULL; = retorna os dados que 
+	possuem valor nulo no campo espcificado.
+
+********** TRABALHANDO COM VIEWS ***********
+
+CREATE VIEW nome_view AS SELECT * FROM nome_tabela; = este comando cria uma VIEW(visão) dos dados de uma tabela.
+
+ALTER VIEW nome_view AS SELECT nome_campo AS novo_nome WHERE nome_campo = 'valor'; este comando altera a view.
+
+DROP VIEW nome_view; = este comando deleta a view criada.
+
+
+********** TRABALHANDO COM INDEX NAS TABELAS *********
+
+SHOW INDEX FROM nome_tabela = este comando mostra quais os index estao na tabela
+
+CREATE [UNIQUE] INDEX nome_indice ON nome_tabela(nome_campo) = este comando cria um indice na tabela marcado no campo passado como parametro
+
+ALTER TABLE nome_tabela ADD INDEX nome_indice (nome_campo) = este comando adiciona um indice na tabela em campo que nao e um indice
+
+DROP INDEX nome_ind ON nome_tabela; = este comando deleta o indice especificado da tabela.
+
+
+
+********* Atualização de dados da tabela **********
+
+UPDATE nome_tabela SET nome_campo = 'novo valor do campo' WHERE nome_campo = Valor; = este comando altera o valor do campo. Obs:. na clausula where deve-se usar um campo chave para a atualizacao
+
+
+
+
+********* DELETANDO REGISTROS DA TABELA ************
+
+DELETE FROM nome_tabela WHERE nome_campo = valor_campo;  = este comando exclui o registro(linha) inteiro da tabela de acordo com o valor passado. 
+
+TRUNCATE TABLE nome_tabela; = este comando exclui todos os registros da tabela de uma vez.
+
+
+
+
+********* TRABALHANDO COM STORAGED PROCEDURES
+
+CREATE PROCEDURE nome_procedimento(VAR TIPO_DADO) select * from nome_tabela where idcontato = VAR; = este comando cria um procedimento, uma acao que e executa 
+sempre o o procedimento e chamado.
+
+CALL nome_procedimento(valor); = este comando chama o procedimento armazenado e executa a funcao que foi criada no procedimento de acordo com a variavel.
+
+DROP PROCEDURE nome_procedimento; = este comado deleta o procedimento armazenado do schema do SGBD.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+python --version  = este comando retorna a versao do python que esta instalada no sistema operacional
+
+pip --version = retorna a versão do pip(gerenciador de pacotes) que esta presente na instalacao atual do python
+
+python -m pip install --upgrade pip  = este comando faz a atualizacao da versao do pip instalado no sistema operacional pela versao mais recente lancada
+
+****** TRABALHANDO COM AMBIENTES VIRTUAIS *********
+ 
+1 passo = acessar a pastas onde estao os arquivos de pip e lib e copiar o caminho EX: c:/user/nome_user/AppData/Local/programs/Python/python-32/Scripts
+
+2 passo = adicionar um path com o caminho copiado
+
+3 passo criar uma variavel de ambiente e como o nome WORKON_NOME e o valor da variavel %USERPROFILE%\Envs
+
+virtualenv: ambiente virtual na linguagem python que abstrai a instalação padrao do python
+
+pip install virtualenv  = este comando instala o ambiete virtual no python que abstrai a instalacao padrao do python
+
+pip install virtualenvwrapper-win  = instala ambiente virtual no python
+
+mkvirtualenv nome_ambiente  = este comando cria um ambiente virtual para se trabalha com o python de maneira isolada
+
+deactivate = este comando sair do ambiente virtual e volta para o ambiente de padrao do python no sistema operacional
+
+workon nome_ambiente  = este comando entra no ambiente virtual criado.
+
+rmvirtualenv nome_ambiente  = este comando exclui um ambiente ja existente 
+
+
+"""
+
+comentarios de varias linhas sao feitos entre 3 aspas duplas
+
+"""
+
+#comentarios de uma linha sao feitos com  #
+
+dir(var/dado) = o dir retorna uma lista com todos os metodos que podem ser utilizados com o tipo de dado que esta na variavel passada como parametro
+
+help(var.metodo) = o help explica o funcionamento do metodo que a variavel esta usando
+
+input() = a funcao input recebe um dado digitado no teclado
+
+print('forma de imprimir a %s' %variavel) = forma mais antiga de usar a funcao print
+
+print('forma de imprimir a {0}'.format(variavel)) = forma moderna de usar a funcao print
+
+print(f'forma moderno de inprimir a {variavel}') = forma mais atual de usar a funcao print
+
+
+************* OPERADORES NUMERICOS ***********
+
+type(var/valor) = a funcao type retorna qual é o tipo de dado da variavel 
+
++ Operador de adicão
+
+- Operador de subtracao
+
+* Operador de multiplicacao
+
+/ Operador de Divisao
+
+// Operador de divisao que retorna o valor inteiro da divisao
+
+% Operador que retorna o resto da divisao
+
+x**y - Operador de portenciacao(retorna o valor de x elevado a y)
+
+x += 1  Operador de incremento  = disponivel apartir da versão 3.7 do python
+
+x -= 1 Operador de decremento   = disponivel apartir da versão 3.7 do python
+
+x *= 1 operador de incremento de multiplicacao  = disponivel apartir da versão 3.7 do python
+
+x /= 1 Operadord de incremento de divisao inteira   = disponivel apartir da versão 3.7 do python
+
+
+********** TIPOS DE DADOS NO PYTHON ************
+
+int/float/boolean(True/False)/
+
+
+****** TRABALHANDO COM STRING ********
+
+pal = 'string'
+
+pal.upper() = a funcao upper coloca a string toda em letras maiusculas
+
+pal.lower() = a funcao lower coloca a string toda em letras minusculas
+
