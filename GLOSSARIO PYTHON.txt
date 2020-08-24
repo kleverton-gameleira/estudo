@@ -88,3 +88,16 @@ pal.upper() = a funcao upper coloca a string toda em letras maiusculas
 
 pal.lower() = a funcao lower coloca a string toda em letras minusculas
 
+pal.isupper() = o comando isupper() verifica se a string esta em maiuscula
+
+pal.islower() = o comando islower() verifica se a string esta em minuscula
+
+pal.split() = o comando split() transforma a string em uma lista com base nos espaços em branco ou no que esta dentro dos parenteses
+
+pal[::-1] = este comando coloca a string passada ao contrario
+
+pal.capitalize() = o comando capitalize() coloca a primeira letra da string em maiuscula
+
+pal.replace('c1','c2') = a funcao replace substitui o c1 pelo c2 dentro da string
+
+
