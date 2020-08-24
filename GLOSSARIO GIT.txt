@@ -19,3 +19,5 @@ git log = este comando retorna todos os commits que foram feitos ate o momento n
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
 git push origin master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github
+
+git clone https://github.com/fulanodasilva/citacoes.git = este comando clona todo o conteudo que esta em um diretorio remoto no github para o seu diretorio local
