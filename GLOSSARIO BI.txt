@@ -1,0 +1,5 @@
+TABELA FATO: esta tabela armazenas as medidas que seram calculadas, ela representa o fato em si que ocorreu dentro da empresa, existem 6 tipos de fatos
+	     (fato transacional,fato agregada,  ) 
+
+
+TABELA DIMENSAO: 
