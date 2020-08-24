@@ -15,3 +15,5 @@ git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona to
 git commit -m 'mensagem que identifica o commit que acabou de ser realizado'  = este comando grava no repositorio do git todas as alterações que foram feitas no arquivo
 
 git log = este comando retorna todos os commits que foram feitos ate o momento no repositorio
+
+git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
