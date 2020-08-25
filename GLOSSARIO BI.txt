@@ -1,5 +1,27 @@
+******************** DEFINIÇÕES *************************
+
 TABELA FATO: esta tabela armazenas as medidas que seram calculadas, ela representa o fato em si que ocorreu dentro da empresa, existem 6 tipos de fatos
-	     (fato transacional,fato agregada,  ) 
+	     (fato transacional,fato agregada, fato consolidada, fato snapshot periodico, fato snapshot acumulado, fato sem fato) 
 
 
-TABELA DIMENSAO: 
+TABELA DIMENSAO: esta tabela contem todos os dados que qualificam o fato, sao as visoes pelas quais nos queremos analisar o fato ocorrido
+
+
+*************** METODOLOGIA DE MODELAGEM DIMENSIONAL DE DW **********************
+
+PASSO 1 - definição da fato e de suas metricas e de sua chaves estrangeiras
+
+PASSO 2 - definição da tabelas dimensao com base nas chaves estrangeiras definidas na tabela fato.
+
+PASSO 3 - apos a definicao das tabela fato e dimensao se faz o join entre as duas tabelas para visualizar os campos que seram retornados na consulta
+
+***** DEFINOCAO DE PRIORIDADE DE CARGA NO MODELO DIMENSIONAL *****
+
+1ª CARGA: as primeiras tabelas as serem carregadas sao as tabelas dimensao, pelo fato de que elas possuem os dados que qualificam o fato ocorrido
+
+2ª CARGA: apos a carga de todas as tabelas dimensao e carregada a tabela fato com os dados das medidas que queremos analisar
+
+***** BOAS PRATICAS DE NOMENCLATURA *****
+
+1 - nomes de campos natural key sao genericos o suficiente para que voce os identfique no modelo e saiba de que campo se trata, mas que caso haja uma mudança nao 
+    seja necessario nenhum retrabalho no que ja foi feito com base nesse campo. 
