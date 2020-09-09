@@ -1,12 +1,15 @@
 **************** TRABALHANDO COM O GIT PARA CONTROLAR VERSOES *********
 
+ls -lha = este comando lista todo o conteudo do diretorio que esta sendo ratreado pelo git
+
 git config --global user.name 'kleverton gameleira'   =  este comando informa para o git o nome do usuario que esta usando o sistema
 
 git config --global user.email vetongameleira@gmail.com   = este comando informa um email para o usuario do git esta usando o sistema
 
 git init = este comando inicia um repositorio git no diretorio selecionado para versionar e controlar os arquivos as versoes dos arquivos existentes no diretorio
 
-git status = este comando retorna qual é o status dos arquivos do diretorio, se estao ou nao sendo rastreados
+git status = este comando retorna qual é o status dos arquivos do diretorio, se estao ou nao sendo rastreados ou se existe nos arquivos rastreados alguma mudanca que
+	     ainda nao foi comitada.
 
 git add nome_arquivo.extensao  = este comando adiciona o arquivo para area de rastreo, apartir de agora as mudanças no arquivos seram rastreadas
 
