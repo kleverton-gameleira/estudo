@@ -20,7 +20,18 @@ git commit -m 'mensagem que identifica o commit que acabou de ser realizado'  = 
 git commit -a -m 'mensagem que descreve o commit' = este comando faz a adicao da alteracao na area de stage e commit a mudança no diretorio de uma vez só.
 
 git commit -am 'mensagem que descreve o commit' = este comando otimiza o trabalho de adicionar arquivos na area de stage e comitalos de uma vez so com um unico comando.
-git log = este comando retorna todos os commits que foram feitos ate o momento no repositorio
+
+git log = este comando retorna todos os commits que foram feitos ate o momento no repositorio.
+
+a tecla q sai do resultado de consulta dos logs de alteracoes
+
+git log -n 2 = este comando retorna apenas os ultimos comites feitos com referencia ao numero informado no final do comando
+
+git log --oneline  = este comando retorna todos os comites feitos de maneira otimizada, mostrando apenas o codigo hash e a descricao do commit
+
+git log --stat = este comando retorna todos os comites efetuados e mostra a informacao de quantas linhas foram inseridas e quando foram removidas do documento.
+
+git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos de saida de log na mesma consulta.
 
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
