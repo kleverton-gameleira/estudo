@@ -33,8 +33,10 @@ git log --stat = este comando retorna todos os comites efetuados e mostra a info
 
 git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos de saida de log na mesma consulta.
 
-git diff = este comando retorna as diferencas que existentes em unm arquivos que ainda nao foi adicionado na area de stage e a ultima versao deste arquivo
-	   que foi adicionado na area de stage e esta pronto para ser comitado
+git diff nomeArquivo.extensao = este comando retorna todas as diferenças que foram feitas no arquivo passado como parametro no comando que ainda nao foi adicionado na 
+				area de stage para ser comitado.
+
+git diff = retorna todas as diferenças que foram feitas em todos os arquivos que ainda nao foram adicionados na area de stage 
 
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
