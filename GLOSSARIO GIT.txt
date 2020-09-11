@@ -41,6 +41,9 @@ git diff = retorna todas as diferenças que foram feitas em todos os arquivos qu
 git diff --staged = este comando retorna as diferencas que existem entre o arquivo que foi modificado e acabou de ser inserido na area de stage mas que ainda nao foi
 		    comitado, para a ultima versao do arquivo que foi comitado.
 
+git diff 222cccc = o comando git diff acompanhando de uma codigo hash do arquivo que ainda nao esta na area de stage retorna a diferenca entre o arquivo que foi comitado
+		   pela ultima vez e o arquivo que acabou de ser alterado e ainda nao foi adicionado o area de stage para ser comitado.
+
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
 git push origin master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github
