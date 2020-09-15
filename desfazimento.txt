@@ -1,0 +1,258 @@
+******** TIPOS DE DADOS *****************
+
+smallint/integer/int/bigint = valores numericos inteiros
+
+varying/varchar/char/text = valores de string
+
+decimal/double/real/numeric = para armazenar valores com precisao decimal
+
+boolean = valores verdadeiro ou falso
+
+timestamp/date/time = valores de datas e hora
+
+smallserial/serial/bigserial = campos de auto_incremento
+
+
+
+
+CREATE TABLESPACE nome_tablespace OWNER nome_usuarioRoot LOCATION 'C:\Program Files\PostgreSQL\12\data\bancos' = este comando cria uma tablespace onde os arquivos 
+														fisicos do banco vao ficar armazenados
+
+ALTER TABLE 'novo_banco' SET TABLESPACE nova_tablespace; = este comando troca os arquivos fisicos do banco de dados de tablespace
+
+
+
+CREATE DATABASE nome_banco [with tablespace = 'nome_tablespace']; = este comando cria um banco de dados
+
+ALTER DATABASE nome_banco RENAME TO novo_nomeBanco; = este comando troca o nome do banco de dados especificado.
+
+DROP DATABASE nome_banco; = este comando exclui o banco de dados do SGBD
+
+CREATE TABLE nome_tabela(
+	nome_campo tipo_dado(serial: campo auto_incremento) primary key,
+	nome_campo tipo_dado primary key,  =  este comando cria uma tabela no SGBD
+	nome_campo tipo_dado primary key
+);
+
+
+
+DROP TABLE nome_tabela; = este comando exlclui a tabela do banco de dados 
+
+CREATE SEQUENCE nome_sequencia; = este comando cria uma sequencia numerica do tipo auto_increment para um campo chave
+
+ALTER TABLE nome_tabela ALTER COLUMN nome_coluna SET DEFAULT NEXTVAL('nome_sequencia'); = este comando atribui a um campo especifico a sequencia crianda
+
+DROP SEQUENCE nome_sequencia [CASCADE]; = este comando apaga do SGBD a sequencia especificada, o comando CASCADE é utilizado se a seuquencia que esta sendo excluir
+					  estiver sendo vinculada a alguma tabela no momento da exclusao.
+
+ALTER TABLE nome_tabela ADD FOREING KEY(nome_campo) REFERENCES nome_tabela(nome_campo); = este comando adiciona uma chave estrangeira na tabela especificada
+												     referenciando a tabela que contem a chave primaria.
+
+
+ALTER TABLE nome_tabela ADD CONSTRAINT nome_constraint PRIMARY KEY(campo_chavePrimaria) = este comando adiciona uma chave primaria no campo especificado
+
+
+ALTER TABLE nome_table DROP CONSTRAINT nome_constraint; = este comando exclui uma constraint da tabela.
+
+ALTER TABLE nome_tabela ADD CHECK(condicao de teste); = este comando adiciona uma validacao de para checar uma restricao para a insercao de dados na tabela.
+
+ALTER TABLE nome_tabela ADD COLUMN nome_coluna INT/VARCHAR(); = este comando adiciona a coluna especificada na tabela especificada.
+
+ALTER TABLE nome_tabela DROP COLUMN nome_coluna; = este comando exclui a coluna especificada da tabela
+
+SELECT * FROM nome_tabela; = este comando retorna todos os registros da tabela especificada
+
+SELECT nome_campo,nome_campo,nome_campo FROM nome_tabela; = este comando retorna todos os registros da tabela para os campos especificados
+
+SELECT nome_campo AS novo_rotulo FROM nome_tabela; = a clausula AS coloca uma rotulo novo na coluna no momento da consulta
+
+SELECT nome_campo,nome_campo,nome_campo, FROM nome_tabela WHERE nome_campo = 'valor'; = este comando retorna todos os registros dos campos solicitados onde o valor
+											do campo na clausula where seja igual.
+
+
+SELECT * FROM nome_tabela ORDER BY nome_campo [ASC/DESC]; = este comando retorna os registros de acordo com a solicitação ordenando o resulto pelo campo especificado
+ 							    no ORDER BY, a clausula ASC/DESC coloca essa ordenação no sentido crescente(padrao) ou decrescente.
+
+
+SELECT DISTINCT nome_campo FROM nome_tabela; = este comando retorna os valores dos campos solicitados na consulta sem repetir os campos cm valores iguais.
+
+
+SELECT tb1.nome_campo,tb2.nome_campo, FROM nome_tabela1 as tb1, nome_tabela2 WHERE tb1.id_estrangeira = tb2.primaria; = este comando retorna os dados de duas tabelas
+															com base na ligacao das chaves estrangeira da 
+															da esquerda com a primaria da tabela da direita
+
+
+SELECT tb1.nome_campo,tb1.nome_campo,tb2.nome_campo,tb3.nome_campo FROM nome_tabela1 as tb1 INNER JOIN nome_tabela2 as tb2 ON tb1.estrangeira = tb2.primaria
+INNER/LEFT/RIGHT JOIN nome_tabela3 as tb3 ON tb1.estrangeira = tb3.primaria; = este comando retorna os dados de varias tabelas ao mesmo tempo com base nas ligacoes das chaves
+								    nas clausulas ON
+
+SELECT COUNT(nome_coluna) FROM nome_tabela; = esta funcao retorna a quantidade de campos uma tabela com o registro especificado
+
+SELECT MAX(nome_coluna) FROM nome_tabela; = este comando retorna o maior valor entre os registros do campo especificado
+
+SELECT MIN(nome_coluna) FROM nome_tabela; = este comando retorna o menor valor entre os registros do campo especificado
+
+SELECT AVG(nome_coluna) FROM nome_tabela; = este comando retorna a media dos valores entre os registros dos campo especificado
+
+UPDATE nome_tabela SET nome_campo = 'novo_valor' WHERE nome_campo = valor; = este comando atualiza o valor do campo especificado
+
+DELETE FROM nome_tabela WHERE nome_campo = valor; = este comando deleta o registro da tabela com base no campo especificado na clausula where.
+
+CREATE VIEW nome_visao AS select nome_campo,nome_campo,nome_campo, FROM nome_tabela WHERE nome_campo; =  este comando cria uma visao para um connjunto de dados que 
+													 frequentemente pesquisados.
+
+DROP VIEW nome_visao; =  este comando exclui uma visao criada;			
+
+
+ALTER TABLE nome_tabela ADD FORIEGN KEY(campo_ChaveEstrangeira) REFERENCES nome_tabela(campo_chavePrimaria); = este comando adiciona uma chave estrangeira na campo 
+													       especificado 
+
+
+
+***** TRABALHANDO COM FUNCTION(STORED PROCEDURES)
+
+CREATE OR REPLACE FUNTION nome_funcao(PARAM TIPO)
+RETURNS TIPO_DADO AS 
+
+$$
+DECALRE 
+var01 tipo;
+var02 tipo;
+BEGIN 
+    SELECT nome_campo,nome_campo INTO var01,var02 FROM nome_tabela WHERE nome_campo = valor;
+END
+$$
+language plpgsql;
+
+
+******* FUNCOES EMBUTIDAS NO BANCO
+
+
+*** OPERADORES LOGICOS : AND/OR/NOT
+
+*** OPERADORES DE COMPARACAO: <,>,>=,<=,=,!=/<>
+
+*** OPERADORES MATEMATICOS: +,-,/,*,%,^
+
+******* TRABALHANDO COM FUNCOES MATEMATICAS ******
+
+select abs(10) = esta funcao retorna o valor absoluto passado entre parenteses
+
+select cbrt(8) = esta funcao retorna o valor da raiz cubica do valor passado como parametro
+
+select ceil(14.2) = esta funcao retorna o valor arrendondado sempre para cima 
+
+select floor(14.2) = esta funcao retorna o valor arrendondado sempre para baixo
+
+select round(1.1/1.9) = esta funcao retorna o valor arredondado para o inteiro mais proximo
+
+select degrees(10) = esta funcao converte o valor em radiandos para graus e mostra o seu valor
+
+select radians(10) = esta funcao converte o valor passado como paramentros de graus para radianos
+
+select div(v1,v2) = esta funcao retorna a divisao de v1 por v2
+
+select exp(2) = esta funcao retorna o valor da exponenciacao do valor passado como parametro
+
+select log(10) = esta funcao retorna o valor do logaritimo do valor passado como parametro
+
+select mod(v1,v2) = esta funcao retorna o resto da divisao de v1 por v2
+
+select power(v1,v2) = esta funcao retorna o valor da exponenciacao de v1 por v2
+
+select sqrt(valor) = esta funcao retorna a raiz quadrada do valor passado como parametro
+
+
+******* TRABALHANDO COM FUNCOES DE STRING ******
+
+SELECT str1 || str2 FROM nome_tabela = esta funcao concatena a str1 e a str2 dois em um unico campo
+
+
+SELECT CONCAT(str1,str2) FROM nome_tabela = esta funcao concatena a string em uma so palavara 
+
+SELECT CHAR_LENGTH/LENGTH(str) FROM nome_tabela =  esta funcao retorna a quantidade de carateres que a string passada como parametro possui
+
+select upper('string'); = esta funcao retorna a string passada como parametro em letras maiusculas.
+
+select lower('strign'); = esta funcao retorna a string passada como parametro em letras minusculas.
+
+select initcap(nome_campo/'string') from nome_tabela; = esta funcao retorna o valor da string com a letra inicial em maiuscula
+
+select overlay(string placing '*******' from 1 for 5); = esta funcao substritui os caracteres que estao dentro do intervalo especificado pelo caracter marcando em placing
+
+select substring(noma_campo/string) from nome_tabela; = esta funcao retorna o primeiro caracter da string passada como parametro
+
+select position('caracter/string') from nome_tabela; = esta funcao retorna em que posicao da string o caracter passado como parametro esta localizado ou
+						       se inicia dentro da string
+
+
+
+******* TRABALHANDO COM FUNCOES DE DATA E HORA ******
+
+
+show datestyle; = esta funcao retorna o formato em que as datas sao exibidas pelo SGBD
+
+alter database nome_banco set datestyle to iso, dmy/ymd/mdy; = esta funcao altera a maneira como o postgres exibe as datas.
+
+select age(timestamp '12/03/1986') = esta funcao retorna a quantidade de anos,meses e dias que se passaram desde a data passada como parametro ate o dia da consulta
+
+select clock_timestamp(); = esta funcao retorna a data, hora completa atuais do sistema
+
+select current_date; = esta funcao retorna data completa atual do SGBD.
+
+select current_time; =  esta funcao retorna a hora completa atual do SGBD.
+
+select localtime; = esta funcao retorna a hora atual do SGBD.
+
+select current_timestamp; = esta funcao retorna a data e a hora atual do SGBD.
+
+select localtimestamp; = esta funcao retorna a data e a hora atual do SGBD.
+
+select now(); = esta funcao retorna a data e hora atual do SGBD.
+
+select date_part('day', '12/03/1986'/ current_date); = esta funcao retorna o dia da data informada
+
+select date_part('month', '12/03/1986'/ current_date); = esta funcao retorna o mes da data informada
+
+select date_part('year','12/03/1986'/ current_date); = esta funcao retorna o ano da data informada.
+
+select date_part('hour','HH:MM:SS'/ current_time); = esta funcao retorna a hora do tempo informada
+
+select date_part('minute', 'HH:MM:SS'/ current_time); = esta funcao retorna a os minutos da hora informada.
+
+select date_part('second','HH:MM:SS'/ current_time); = esta funcao retorna os segundos da hora informada.
+
+
+****** FUNCOES AGREGADORAS ******
+
+
+SELECT COUNT(nome_campo) FROM nome_tabela; = esta funcao retorna a quantidade de registros que a tabela possui para o campo passado como parametro.
+
+SELECT SUM(nome_campo) FROM nome_tabela; = esta funcao retorna a soma de todos os valores dos registros para o campo passado como parametro.
+
+SELECT AVG(nome_campo) FROM nome_tabela; = esta funcao retorna a media dos valores dos registros para o campo passado como parametro.
+
+SELECT MAX(nome_campo) FROM nome_tabela; = esta funcao retorna qual e o maior valor dos registros para o campo passado como parametro
+
+SELECT MIN(nome_campo) FROM nome_tabela; = esta funcao retorna qual e o menor valor dos registros para o campo passado como parametro.
+
+SELECT DISTINCT nome_campo FROM nome_tabela; = esta funcao retorna uma lista demonstrando a variedade dos dados cadastrados na tabela
+
+SELECT nome_campo FROM nome_tabela GROUP BY nome_campo; = esta funcao retorna os dados dos registros agrupando os resultados pelo campo especificado.  
+
+SELECT nome_campo FROM nome_tabela WHERE nome_campo LIKE 'valor'; = esta funcao retorna todos os registros que possuem o valor da string que esta entre aspas
+
+SELECT nome_campo,nome_campo FROM nome_tabela WHERE nome_campo LIKE 'valor%'; = esta funcao retorna todos os registros cujo o valor comeca com o especificado entre aspas
+
+SELECT nome_campo,nome_campo FROM nome_tabela WHERE nome_campo LIKE '%valor'; = esta funcao retorna todos os registros cujo o valor termina com o especificado entre aspas
+
+SELECT nome_campo,nome_campo FROM nome_tabela WHERE nome_campo LIKE '%valor%'; = esta funcao retorna todos os registros cujo o valor que esta entre aspas esteja contido em algum lugar da string
+
+
+
+****** TRABALHANDO COM TRIGGER(GATILHO) ******
+
+
+
+
+
