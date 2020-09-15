@@ -10,6 +10,40 @@ varias linhas
 
 """
 
+***** CONSIDERACOES GERAIS *****
+
+BUG = termo que designa um erro de programação
+
+DEBUGGING = termo que designa o processo de rastreio de um erro de programacao 
+
+*** FUNCOES GERAIS *****
+
 print('mensagem para aprensetar na tela') = a funcao print exibe a mensagem que esta entre aspas na tela ,do sistema
 
 input('mensagem para solicitar algo do usuario') = a funcao input inserir o que foi solicitado ao usuario pela mensagem entre aspas na variavel
+
+type(var) = esta funcao retorna o tipo de dado da variavel passada como parametro
+
+***** OPERADORES MATEMATICOS ME PYTHON *****
+
+n1 + n2 = operacao de soma entre os operandos
+
+n1 - n2 = operacao de subtração entre os operandos
+
+n1 * n2 = operacao de multiplicacao entre os operandos
+
+n1 / n2 = operacao de divisao entre os operandos
+
+n1 // n2 = operacao de divisao retornando somente o valor inteiro da divisao entre os operandos
+
+n1 % n2 = operacao de divisao que retorna apenas o resto da divisao entre os operandos
+
+n1 ** n2 = operacao de exponenciacao de n1 sobre n2
+
+
+***** OPERACOES COM STRINGS *****
+
+
+
+
+
