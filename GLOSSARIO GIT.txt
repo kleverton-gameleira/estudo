@@ -49,6 +49,8 @@ git diff f692c0a..222cccc = este comando retorna a diferenca no arquivo no inter
 git diff 222cccc~2 = este comando é uma variação do comando git diff para verificar a diferenca no arquivo entre os comites sendo que o numero que vem apos o ~
 		     corresponde a quantidade de comites anteriores que se quer pesquisar
 
+git rm nome_arquivo.extensao = este comando remove um arquivo que ja esta sendo rastreado do diretorio principal do git 
+
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
 git push origin master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github
