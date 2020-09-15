@@ -6,6 +6,28 @@ TABELA FATO: esta tabela armazenas as medidas que seram calculadas, ela represen
 
 TABELA DIMENSAO: esta tabela contem todos os dados que qualificam o fato, sao as visoes pelas quais nos queremos analisar o fato ocorrido
 
+******* TIPOS DE DADOS ********
+
+CSV: Arquivos onde a seperacao entre os dados e a informacao se da atraves da separação por virgulas, EX:. kleverton,34,macapaense
+
+
+
+*************** ARQUITETURA DE BI **********************
+
+1 PASSO: definicao das fontes de dados, ou seja, mapear de onde virao os dados que seram inseridos no DW, em que formato esses dados estao atualmente, como sera
+         o processo de extracao desses dados das fontes.
+
+2 PASSO: Integração dos dados, ou seja,  é o processo de ETL propriamente dito, onde seram definidas as etapas de extracao, transformacao e carga dos dados
+
+3 PASSO: Data Warehouse, é onde os dados seria armazenados de maneira definiltiva para que as analises sejam feitas. o DW pode ser uma unica fonte de todos os dados
+	 ou composto pela juncao de varios Data Marts que sao especies de DW menores que armazenam dados de um setor ou departamento especifico.
+
+4 PASSO: Data Analisys, nessa etapa é onde e feita a analise dos dados que estao inseridos no DW, usando tecnicas de analise como METRICAS,KPI,DEEP LEARNING, MACHINE
+	 LEARNING,DATA MINIG,OLAP.
+
+5 PASSO: Visualizacao de dados, aqui e a etapa do processo onde as analises seram disponibilizados para os usuarios visualizarem, é o BI em sua excencia, que é
+	 entrega a informacao certa para a pessoa certa no tempo certo. EX:. relatorios de BI, dashboards,
+
 
 *************** METODOLOGIA DE MODELAGEM DIMENSIONAL DE DW **********************
 
