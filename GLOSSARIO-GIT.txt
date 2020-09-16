@@ -75,6 +75,8 @@ git rm nome_arquivo.extensao = este comando remove um arquivo que ja esta sendo 
 
 git mv nome_atual.txt nome_novo.txt = este comando renomea arquivos dentro do diretorio 
 
+git mv nome_arquivo.txt nome_diretorio/nome_arquivo.txt  =  este comando 
+
 
 **** COMANDOS DE INTERAÇÃO COM O DIRETORIO REMOTO DO GIT ****
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
