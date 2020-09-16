@@ -31,6 +31,8 @@ git reset -- nome_arquivo.extensao = este comando retira o arquivo da area de st
 git reset --hard = este comando retira todos os arquivos que estao na area de stage e os traz para a area de trabalho e desfaz automaticamente todas as alteracoes nestes
 		   arquivos, deixando tudo como estava no ultimo comite
 
+git revert --no-edit 8c2eef1 = este comando retira as mudancas adicionadas no arquivo comitado cujo o numero do comite seja o que foi passado como parametro
+
 
 
 **** COMANDOS PARA COMMITAR ARQUIVOS ****
