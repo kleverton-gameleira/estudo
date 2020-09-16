@@ -25,6 +25,12 @@ git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona to
 git checkout -- nome_arquivo.extensao  = este comando desfaz as alterações no arquivo antes que ele seja adicionado a stage area. Outra utilidade para este comando
 					 é que ele pode recuperar os arquivos que deletamos do diretorio principal por acidente
 
+git reset -- nome_arquivo.extensao = este comando retira o arquivo da area de stage trazendo-o para a area de trabalho para que as mudanças que foram adicionadas nele
+				     possam ser desfeitas.
+
+git reset --hard = este comando retira todos os arquivos que estao na area de stage e os traz para a area de trabalho e desfaz automaticamente todas as alteracoes nestes
+		   arquivos, deixando tudo como estava no ultimo comite
+
 
 
 **** COMANDOS PARA COMMITAR ARQUIVOS ****
