@@ -47,3 +47,27 @@ PASSO 3 - apos a definicao das tabela fato e dimensao se faz o join entre as dua
 
 1 - nomes de campos natural key sao genericos o suficiente para que voce os identfique no modelo e saiba de que campo se trata, mas que caso haja uma mudança nao 
     seja necessario nenhum retrabalho no que ja foi feito com base nesse campo. 
+
+
+
+
+*************** ARQUITETURA DE DW **********************
+
+
+1 - DATA SOURCE: sao os locais onde os dados estao, os sistemas transacionais, as planilhas de excel, os email, as pastas de documentos, etc...
+
+
+2 - STAGE AREA : banco de dados criado para receber os dados que viram das fontes de dados, é aqui que eles seram tratados
+
+
+3 - DATA WAREHOUSE: banco de dados modelado dimensionalmente para responder as consultas
+
+
+****** METODOLOGIA PARA A CRIACAO DE MODELO DIMENSIONAL *******
+
+1 PASSO: definicao da tabela fato, ou seja quais sao as metricas que ela vai carregar, quais sao os chaves estrabgeira que ela contem que definiram quais seram as 
+	 dimensoes que estaram conectadas a ela
+
+
+2 PASSO: apos a definicao da tabela fato, sao definidas as dimensoes que estarm conectadas a fato, elas contem os dados que qualificam as metricas contidas na fato
+	 como: sorrogate key, natural key, atributos 
