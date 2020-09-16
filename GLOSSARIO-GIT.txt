@@ -33,6 +33,9 @@ git reset --hard = este comando retira todos os arquivos que estao na area de st
 
 git revert --no-edit 8c2eef1 = este comando retira as mudancas adicionadas no arquivo comitado cujo o numero do comite seja o que foi passado como parametro
 
+git revert --hard 8c2eef1 = este comando reverte automaticamente todas as alteracoes feitas no arquivo naquele comite passado como parametro porem o historico do repositorio
+			    é rescrito. 
+
 
 
 **** COMANDOS PARA COMMITAR ARQUIVOS ****
