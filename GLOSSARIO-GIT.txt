@@ -73,6 +73,8 @@ git diff 222cccc~2 = este comando é uma variação do comando git diff para ver
 
 git rm nome_arquivo.extensao = este comando remove um arquivo que ja esta sendo rastreado do diretorio principal do git 
 
+
+**** COMANDOS DE INTERAÇÃO COM O DIRETORIO REMOTO DO GIT ****
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
 git push origin master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github
