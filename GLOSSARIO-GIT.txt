@@ -1,10 +1,5 @@
 **************** TRABALHANDO COM O GIT PARA CONTROLAR VERSOES *********
 
-***********************************************************************
-***********************************************************************
-***********************************************************************
-***********************************************************************
-
 ls -lha = este comando lista todo o conteudo do diretorio que esta sendo ratreado pelo git
 
 git config --global user.name 'kleverton gameleira'   =  este comando informa para o git o nome do usuario que esta usando o sistema
