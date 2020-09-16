@@ -11,15 +11,28 @@ git init = este comando inicia um repositorio git no diretorio selecionado para 
 git status = este comando retorna qual é o status dos arquivos do diretorio, se estao ou nao sendo rastreados ou se existe nos arquivos rastreados alguma mudanca que
 	     ainda nao foi comitada.
 
+
+**** COMANDOS PARA ADICIONAR ARQUIVOS NA AREA DE STAGE *******
+
+
 git add nome_arquivo.extensao  = este comando adiciona o arquivo para area de rastreo, apartir de agora as mudanças no arquivos seram rastreadas
 
 git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona todos os arquivos contidos no diretorio na area de rastreio de uma vez só
+
+
+**** COMANDOS PARA COMMITAR ARQUIVOS ****
+
 
 git commit -m 'mensagem que identifica o commit que acabou de ser realizado'  = este comando grava no repositorio do git todas as alterações que foram feitas no arquivo
 
 git commit -a -m 'mensagem que descreve o commit' = este comando faz a adicao da alteracao na area de stage e commit a mudança no diretorio de uma vez só.
 
 git commit -am 'mensagem que descreve o commit' = este comando otimiza o trabalho de adicionar arquivos na area de stage e comitalos de uma vez so com um unico comando.
+
+
+
+**** COMANDOS PARA VISUALIZAR O HISTORICO DE COMITES REALIZADOS ****
+
 
 git log = este comando retorna todos os commits que foram feitos ate o momento no repositorio.
 
@@ -32,6 +45,12 @@ git log --oneline  = este comando retorna todos os comites feitos de maneira oti
 git log --stat = este comando retorna todos os comites efetuados e mostra a informacao de quantas linhas foram inseridas e quando foram removidas do documento.
 
 git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos de saida de log na mesma consulta.
+
+
+
+**** COMANDOS PARA VISUALIZAR A DIFERENÇA ENTRE OS ARQUIVOS ****
+
+
 
 git diff nomeArquivo.extensao = este comando retorna todas as diferenças que foram feitas no arquivo passado como parametro no comando que ainda nao foi adicionado na 
 				area de stage para ser comitado.
@@ -48,6 +67,9 @@ git diff f692c0a..222cccc = este comando retorna a diferenca no arquivo no inter
 
 git diff 222cccc~2 = este comando é uma variação do comando git diff para verificar a diferenca no arquivo entre os comites sendo que o numero que vem apos o ~
 		     corresponde a quantidade de comites anteriores que se quer pesquisar
+
+
+**** COMANDOS PARA REMOVER E/OU RENOMEAR ARQUIVOS E MOVIMENTAR ENTRE DIRETORIOS ****
 
 git rm nome_arquivo.extensao = este comando remove um arquivo que ja esta sendo rastreado do diretorio principal do git 
 
