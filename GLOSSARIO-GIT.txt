@@ -20,6 +20,13 @@ git add nome_arquivo.extensao  = este comando adiciona o arquivo para area de ra
 git add .  = o comando add contendo um ponto e nao o nome do arquivo adiciona todos os arquivos contidos no diretorio na area de rastreio de uma vez só
 
 
+**** COMANDOS PARA DESFAZER MUDANÇAS ANTES QUE ELAS ESTEJAM NA STAGE AREA ****
+
+git checkout -- nome_arquivo.extensao  = este comando desfaz as alterações no arquivo antes que ele seja adicionado a stage area. Outra utilidade para este comando
+					 é que ele pode recuperar os arquivos que deletamos do diretorio principal por acidente
+
+
+
 **** COMANDOS PARA COMMITAR ARQUIVOS ****
 
 
