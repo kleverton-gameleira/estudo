@@ -71,3 +71,16 @@ PASSO 3 - apos a definicao das tabela fato e dimensao se faz o join entre as dua
 
 2 PASSO: apos a definicao da tabela fato, sao definidas as dimensoes que estarm conectadas a fato, elas contem os dados que qualificam as metricas contidas na fato
 	 como: sorrogate key, natural key, atributos 
+
+
+***** TIPOS DE METRICAS EM BI ******
+
+
+METRICAS ADITIVAS: sao metricas nas quais é possivel realizar operacoes matematicas e que tenha sentido, e que se relaciona com todas as dimensoes.
+
+METRICAS DERIVADAS: sao metricas que resultam do calculo das metricas aditivas, ou seja, sao o resultado de alguma operacao matematica em outras metricas que estejam
+		    definidas na fato.
+
+METRICAS SEMIADITIVA: sao a metricas que podem realizar operacoes matematicas em algumas condicoes, desde de que o resultado dessa operacao faça sentido
+
+METRICAS NAO ADITIVAS: sao as metricas onde nao é possivel realizar as operacoes, porque o resultado dessa operacao nao refletiria a realidade.
