@@ -43,7 +43,18 @@ n1 ** n2 = operacao de exponenciacao de n1 sobre n2
 
 ***** OPERACOES COM STRINGS *****
 
+var.isnumeric() = o metodo isnumeric() verifica se é possivel converter o que foi digitado em um valor numerico
 
+var.isalpha() = o metodo isalpha() verificar se o valor que foi digitado foi é composto por apenas letras 
 
+var.isalnum() =  o metodo isalnum() verificar se o valor que foi digitado é composto de letras e numeros
+
+var.isupper() = o metodo isupper() verificar se tudo o que foi digitado esta em letras maiusculas
+
+var.islower() = o metodo islower() verificar se tudo o que foi digitado esta em letras minusculas
+
+var.isspace() = o metodo isspace() verifica se o que foi digitado so contem espaco em branco
+
+var.isdigit() = o metodo isdigit() verifica se o que foi digitado foi um numero
 
 
