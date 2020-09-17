@@ -96,9 +96,23 @@ git mv nome_atual.txt nome_novo.txt = este comando renomea arquivos dentro do di
 git mv nome_arquivo.txt nome_diretorio/nome_arquivo.txt  =  este comando 
 
 
-**** COMANDOS DE INTERAÇÃO COM O DIRETORIO REMOTO DO GIT ****
+**** TRABALHANDO COM O DIRETORIO REMOTO NO GIT ****
+
+git init --bare nome_diretorio.git = este comando cria um diretorio git vazio no servidor sem a working tree para se possa trabalhar com varios devs ao mesmo tempo.
+
+git remote = este comando retorna os nomes todos os repositorio remoto que o nosso repositorio local git esta apontando
+
+git remote -v = este comando retorna todos os nomes de todos os repositorio remoto que o nosso repositorio local do git esta apontando como tambem as suas devidas 
+		urls
+
+git remote add nome_repositorio url_repositorio = este  comando aponta o nosso repositorio git local para um repositorio git em um servidor remoto.
+
 git remote add origin https://github.com/kleverton-gameleira/estudo.git = este comando aponto o diretorio local para um diretorio remoto do github
 
-git push origin master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github
+git remote rename nome_atual novo_nome = este comando renomea o repositorio remoto
+
+git remote set-url nome_diretorio nova_url = este comando altera a url do diretorio remoto para o qual o diretorio local do git aponta  
+
+git push origin/nome_servidor master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github ou em um servidor remoto
 
 git clone https://github.com/fulanodasilva/citacoes.git = este comando clona todo o conteudo que esta em um diretorio remoto no github para o seu diretorio local
