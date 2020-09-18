@@ -38,7 +38,21 @@ n1 // n2 = operacao de divisao retornando somente o valor inteiro da divisao ent
 
 n1 % n2 = operacao de divisao que retorna apenas o resto da divisao entre os operandos
 
-n1 ** n2 = operacao de exponenciacao de n1 sobre n2
+n1 ** n2 = operacao de portenciacao de n1 sobre n2
+
+pow(n1,n2) = o metodo pow() tambem faz a potenciacao dos numeros n1 e n2 ou calcula a raiz quadrada de um numero
+
+ 
+
+***** PRECEDENCIA ****
+
+1 -  ()
+
+2 -  ** 
+
+3 -  * / // %
+
+4 -  + - 
 
 
 ***** OPERACOES COM STRINGS *****
@@ -56,5 +70,9 @@ var.islower() = o metodo islower() verificar se tudo o que foi digitado esta em 
 var.isspace() = o metodo isspace() verifica se o que foi digitado so contem espaco em branco
 
 var.isdigit() = o metodo isdigit() verifica se o que foi digitado foi um numero
+
+var.istitle() = o metodo istitle() verificar se a primeira letras da string esta em maiuscula
+
+
 
 

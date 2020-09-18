@@ -42,6 +42,8 @@ CREATE SEQUENCE nome_sequencia; = este comando cria uma sequencia numerica do ti
 
 ALTER TABLE nome_tabela ALTER COLUMN nome_coluna SET DEFAULT NEXTVAL('nome_sequencia'); = este comando atribui a um campo especifico a sequencia crianda
 
+ALTER TABLE nome_tabela RENAME nome_coluna TO novo_nome_coluna;  = este comando renomeia a coluna da tabela
+
 DROP SEQUENCE nome_sequencia [CASCADE]; = este comando apaga do SGBD a sequencia especificada, o comando CASCADE é utilizado se a seuquencia que esta sendo excluir
 					  estiver sendo vinculada a alguma tabela no momento da exclusao.
 

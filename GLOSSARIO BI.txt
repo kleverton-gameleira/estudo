@@ -6,9 +6,14 @@ TABELA FATO: esta tabela armazenas as medidas que seram calculadas, ela represen
 
 TABELA DIMENSAO: esta tabela contem todos os dados que qualificam o fato, sao as visoes pelas quais nos queremos analisar o fato ocorrido
 
-******* TIPOS DE DADOS ********
+******* TIPOS DE DIMENSOES ********
 
-CSV: Arquivos onde a seperacao entre os dados e a informacao se da atraves da separação por virgulas, EX:. kleverton,34,macapaense
+DIMENSAO HIERARQUICA PAI-FILHO: é a definicao de qual é o menor nivel de visualizacao de dados que o nosso usuario precisa analisar a informação, esse tipo de hierarquia
+				é o que possibilidade realizar processo de drill down e drill up para subir e descer o grao de detalhe da informacao
+
+DIMENSAO DATA: é a dimensao que carrega as informacoes sobre em que momentos os fatos aconteceram, dia, mes, ano,
+
+DIMENSAO DEGENERADA:
 
 
 
@@ -84,3 +89,4 @@ METRICAS DERIVADAS: sao metricas que resultam do calculo das metricas aditivas, 
 METRICAS SEMIADITIVA: sao a metricas que podem realizar operacoes matematicas em algumas condicoes, desde de que o resultado dessa operacao faça sentido
 
 METRICAS NAO ADITIVAS: sao as metricas onde nao é possivel realizar as operacoes, porque o resultado dessa operacao nao refletiria a realidade.
+
