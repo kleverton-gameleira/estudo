@@ -75,4 +75,28 @@ var.istitle() = o metodo istitle() verificar se a primeira letras da string esta
 
 
 
+***** UTILIZANDO MODULOS DE PYTHON *****
 
+import nome_lib = este comando importa uma biblioteca para ser usada no programa 
+
+from nome_lib import nome_funcao = este comando importa uma funcao especifica de dentro da lib especificada no comando
+
+**** MODULO MATH ****
+
+import math: o modulo math contem metodos para calculos matematicos
+
+math.sqrt(num) = este metodo retorna a raiz quadrada do valor da variavel passada como parametro
+
+math.ceil(num) = este metodo retorna o numero arredondado sempre para o primeiro valor inteiro para cima
+
+math.floor(num) = este metodo retorna o numero arredondado sempre para o primeiro valor inteiro para baixo
+
+math.sin(ang) = este metodo calcula o valor do seno do angulo passado como parametro
+
+math.cos(ang) = este metodo calculo o valor do coseno do angulo passado como parametro
+
+math.tan(ang) = este metodo calcula o valor da tangente do angulo passado como parametro
+
+math.hypot(cat_op,cat_ad) = este metodo calcula o valor da hipotenusa de um triangulo retangulo
+
+ 
