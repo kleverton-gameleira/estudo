@@ -77,9 +77,11 @@ var.istitle() = o metodo istitle() verificar se a primeira letras da string esta
 
 ***** UTILIZANDO MODULOS DE PYTHON *****
 
+
 import nome_lib = este comando importa uma biblioteca para ser usada no programa 
 
 from nome_lib import nome_funcao = este comando importa uma funcao especifica de dentro da lib especificada no comando
+
 
 **** MODULO MATH ****
 
