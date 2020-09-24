@@ -55,7 +55,7 @@ pow(n1,n2) = o metodo pow() tambem faz a potenciacao dos numeros n1 e n2 ou calc
 4 -  + - 
 
 
-***** OPERACOES COM STRINGS *****
+***** FUNCOES NATIVAS PARA STRINGS *****
 
 var.isnumeric() = o metodo isnumeric() verifica se é possivel converter o que foi digitado em um valor numerico
 
@@ -111,5 +111,60 @@ math.radians(ang) = o metodo radians converte o valor passado como parametro em 
 random.choice(lista) = o metodo choice de random retorna um valor aleatorio contido dentro da sequencia passada como parametro
 
 random.shuffle(lista) = o metodo shuffle de random embaralha a lista passada como parametro
+
+**** TRABALHANDO COM STRINGS ****
+
+
+*** FATIAMENTO ***
+
+str[incio:final] = retorna apenas os caracteres que estejam compreendidos dentro do intervalo de numero de inicio e final
+
+str[inicio:final:pulo] = retorna os caracteres que estejam compreendidos dentro do intervalo de numeros de inicio e final levando em consideracao o salto
+
+str[:final] = retorna os caracteres que estao desde o inicio da string ate o final
+
+str[inicio:] = retorna os caracteres da string partindo do valor de inicio e indo ate o ultimo caracter da string
+
+
+*** ANALISE ***
+
+
+len(str) = a funcao len() retorna a quantidade de caracteres que a string possui
+
+str.count('e') = a funcao count() conta quantas vezes o caracter passado como parametro se repete dentro da string.
+
+str.find('este') = a funcao find() retorna em que pedaco da string comeca pedaco da string passada como parametro comeca
+
+'string' in str = a funcao in verifica se a string ou caracter existe dentro da variavel ou string e retorna True se sim ou False se não
+
+
+*** TRANSFORMAÇÃO ***
+
+str.replace('e','3') = o metodo replace substitui o caracter passado como primeiro argumeto pelo caracter que foi passado como segundo argumento dentro da string
+
+str.upper() = o metodo upper() coloca todos os caracteres da string em letras maiusculas
+
+str.lower() = o metodo lower() coloca todos os caracteres da string em letras minusculas
+
+str.capitalize() = o metodo capitalize() coloca a primeira letras da cadeia de caracteres em maiuscula deixando o restando da cadeia em minuscula
+
+str.title() =  o metodo title() coloca todas as primeiras letras de todas as palavras da cadeia de caracteres em maiuscula
+
+str.lstrip() = o metodo lstrip() retira todos os espacos em branco do lado esquerdo da string que exitam antes do primeiro caracter
+
+str.rstrip() = o metodo rstrip() retira todos os espacos em branco do lado direito da string que existam depois do ultimo caracter
+
+str.strip() = o metodo strip() remove os espacos em branco no comeco e no final da string deixando apenas os espacos em branco dentro da string
+
+
+*** DIVISAO/JUNCAO ***
+
+str.split() = o metodo split() divide a string e cria uma lista com todos as palavras com base no separador passado como parametro
+
+''.join(str) = o metodo join() pega uma lista e a transforma em uma string separando as palavras com base no parametro passado com ele
+
+
+
+
 
  
