@@ -108,6 +108,8 @@ math.radians(ang) = o metodo radians converte o valor passado como parametro em 
 
 **** MODULO RANDOM ****
 
-random.choice(seq) = o metodo choice de random retorna um valor aleatorio contido dentro da sequencia passada como parametro
+random.choice(lista) = o metodo choice de random retorna um valor aleatorio contido dentro da sequencia passada como parametro
+
+random.shuffle(lista) = o metodo shuffle de random embaralha a lista passada como parametro
 
  
