@@ -101,4 +101,13 @@ math.tan(ang) = este metodo calcula o valor da tangente do angulo passado como p
 
 math.hypot(cat_op,cat_ad) = este metodo calcula o valor da hipotenusa de um triangulo retangulo
 
+math.trunc(num) = este metodo faz o trancamento do valor e com isso somente a parte inteira do numero e exibida
+
+math.radians(ang) = o metodo radians converte o valor passado como parametro em um valor radiando.
+
+
+**** MODULO RANDOM ****
+
+random.choice(seq) = o metodo choice de random retorna um valor aleatorio contido dentro da sequencia passada como parametro
+
  
