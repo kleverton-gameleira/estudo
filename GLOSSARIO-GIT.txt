@@ -116,3 +116,6 @@ git remote set-url nome_diretorio nova_url = este comando altera a url do direto
 git push origin/nome_servidor master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github ou em um servidor remoto
 
 git clone https://github.com/fulanodasilva/citacoes.git = este comando clona todo o conteudo que esta em um diretorio remoto no github para o seu diretorio local
+
+git pull nome_diretorio_remoto master = este comando sincroniza nosso repositorio local com o repositorio remoto para que possamos obter as ultimas atualizacoes e os
+					ultimos comites feitos no projeto.
