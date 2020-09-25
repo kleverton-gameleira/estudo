@@ -10,6 +10,7 @@ protocolo GIT: protocolo proprio do git parecido com o SSH so que menos seguro, 
 
 protocolo HTTP/HTTPS: protocolo utilizado para comunicacao externa usando http ou https. EX:.git clone https://192.168.1.1/opt/repositorios/moveis-ecologicos.git
 
+
 **************** TRABALHANDO COM O GIT PARA CONTROLAR VERSOES *********
 
 ls -lha = este comando lista todo o conteudo do diretorio que esta sendo ratreado pelo git
@@ -131,3 +132,13 @@ git clone https://github.com/fulanodasilva/citacoes.git = este comando clona tod
 
 git pull nome_diretorio_remoto master = este comando sincroniza nosso repositorio local com o repositorio remoto para que possamos obter as ultimas atualizacoes e os
 					ultimos comites feitos no projeto.
+
+***** SERVIÇOS WEB PARA A HOSPEDAGEM DE PROJETOS
+
+github: 
+
+bitbucker:
+
+google code: 
+
+
