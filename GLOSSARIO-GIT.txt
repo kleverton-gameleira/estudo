@@ -79,7 +79,7 @@ git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos 
 
 git log --parents = este comando retorna  o commit pai da branch
 
-git log --decorate = este comando mostra para qual commite a branch master esta apontando.
+git log --decorate = este comando mostra para qual commite a branch que esta em foco esta apontando.
 
 
 
@@ -140,6 +140,7 @@ git pull nome_diretorio_remoto master = este comando sincroniza nosso repositori
 
 
 ***** TRABALHANDO COM BRANCH *******
+
 
 git branch = este comando retorna uma lista com todas as branch que existem no projeto
 
