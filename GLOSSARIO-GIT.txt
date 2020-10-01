@@ -77,7 +77,9 @@ git log --stat = este comando retorna todos os comites efetuados e mostra a info
 
 git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos de saida de log na mesma consulta.
 
+git log --parents = este comando retorna  o commit imediatamente anterior feito no repositorio 
 
+git log --decorate = este comando mostra para qual commite a branch que esta em foco esta apontando.
 
 
 
@@ -135,17 +137,25 @@ git clone https://github.com/fulanodasilva/citacoes.git = este comando clona tod
 git pull nome_diretorio_remoto master = este comando sincroniza nosso repositorio local com o repositorio remoto para que possamos obter as ultimas atualizacoes e os
 					ultimos comites feitos no projeto.
 
-***** TRABALHANDO COM BRANCHS *******
 
-git branch = este comando retorna uma lista com todas as branchs que foram criados no diretorio 
 
-git branch nome_nova_branch = este comando cria uma nova branch no repositorio do git 
+***** TRABALHANDO COM BRANCH *******
 
-git checkout nome_branch = este comando troca da branch atual para a branch especificada
 
-git chekout -b nome_nova_branch = este comando cria e ja muda para a nova branch no momento da criacao 
+git branch = este comando retorna uma lista com todas as branch que existem no projeto
 
-git branch -d nome_branch  = este comando deleta a branch especilficada do diretorio
+git branch -v = este comando mostra qual foi o ultimo commit que foi feito nessa branch
+
+git branch nome_branch = este comando cria uma nova branch no repositorio
+
+git checkout nome_branch = este comando troca a branch atual pela branch passada como parametro para que os comites seja executados na branch selecionada
+
+git checkout -b nome_nova_branch = este comando cria uma nova branch e ja muda o foco do comite para esta branch no momento da sua criacao
+
+git branch -d nome_branch = este comando remove a branch especificada do diretorio
+
+git branch -D nome_branch = este comando deleta a branch especificada mesmo que exista algum comite realizado na branch
+
 
 
 
