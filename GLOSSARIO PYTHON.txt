@@ -24,6 +24,12 @@ input('mensagem para solicitar algo do usuario') = a funcao input inserir o que 
 
 type(var) = esta funcao retorna o tipo de dado da variavel passada como parametro
 
+bin(num) = a funcao bin(num) converte o valor numerico passado como parametro para seu equivalente em codigo binario
+
+oct(num) = a funcao oct(num) converte o valor numerico passado como parametro para o seu equivalente em octal
+
+hex(num) = a funcao hex(num) comverte o valor numerico passado como paramtro para o seu equivalente em hexadecimal
+
 ***** OPERADORES MATEMATICOS ME PYTHON *****
 
 n1 + n2 = operacao de soma entre os operandos
