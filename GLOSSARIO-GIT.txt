@@ -77,6 +77,10 @@ git log --stat = este comando retorna todos os comites efetuados e mostra a info
 
 git log -n 2 --oneline --stat = existe a possibilidade de combinar varios tipos de saida de log na mesma consulta.
 
+git log --parents = este comando retorna  o commit pai da branch
+
+git log --decorate = este comando mostra para qual commite a branch que esta em foco esta apontando.
+
 
 
 **** COMANDOS PARA VISUALIZAR A DIFERENÇA ENTRE OS ARQUIVOS ****
@@ -132,6 +136,25 @@ git clone https://github.com/fulanodasilva/citacoes.git = este comando clona tod
 
 git pull nome_diretorio_remoto master = este comando sincroniza nosso repositorio local com o repositorio remoto para que possamos obter as ultimas atualizacoes e os
 					ultimos comites feitos no projeto.
+
+
+
+***** TRABALHANDO COM BRANCH *******
+
+
+git branch = este comando retorna uma lista com todas as branch que existem no projeto
+
+git branch -v = este comando mostra qual foi o ultimo commit que foi feito nessa branch
+
+git branch nome_branch = este comando cria uma nova branch no repositorio
+
+git checkout nome_branch = este comando troca a branch atual pela branch passada como parametro para que os comites seja executados na branch selecionada
+
+git checkout -b nome_nova_branch = este comando cria uma nova branch e ja muda o foco do comite para esta branch no momento da sua criacao
+
+git branch -d nome_branch = este comando remove a branch especificada do diretorio
+
+
 
 ***** SERVIÇOS WEB PARA A HOSPEDAGEM DE PROJETOS
 
