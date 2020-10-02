@@ -156,7 +156,10 @@ git branch -d nome_branch = este comando remove a branch especificada do diretor
 
 git branch -D nome_branch = este comando deleta a branch especificada mesmo que exista algum comite realizado na branch
 
-git branch --no-merged = este comando retorna a lista das branch em que ocorreram mudanças e que ainda nao foram mescladas na branch master
+git branch --no-merged = este comando retorna a lista das branch em que ocorreram mudanças e que ainda nao foram mescladas na branch master ou na branch atual
+
+git merge nome_branch -m 'descricao do que esta sendo feito'  = este comando mescla branch atual com a branch especificada
+
 
 
 
