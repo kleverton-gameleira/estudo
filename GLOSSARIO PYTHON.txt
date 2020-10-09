@@ -18,6 +18,10 @@ DEBUGGING = termo que designa o processo de rastreio de um erro de programacao
 
 *** FUNCOES GERAIS *****
 
+dir(var) = a funcao dir retorna uma lista com todas as funcoes que estao disponivel para que eu possa usar com esse tipo de variavel
+
+help(var.lower) = a funcao help retorna a informação dizendo para que serve o metodo que estamos usando
+
 print('mensagem para aprensetar na tela') = a funcao print exibe a mensagem que esta entre aspas na tela ,do sistema
 
 input('mensagem para solicitar algo do usuario') = a funcao input inserir o que foi solicitado ao usuario pela mensagem entre aspas na variavel
