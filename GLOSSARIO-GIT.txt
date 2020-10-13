@@ -160,6 +160,11 @@ git branch --no-merged = este comando retorna a lista das branch em que ocorrera
 
 git merge nome_branch -m 'descricao do que esta sendo feito'  = este comando mescla branch atual com a branch especificada
 
+<<<<<<< HEAD
+=======
+git rebase nome_branch_alterada = este comando faz a mesclagem do que foi alterado em uma branch para a branch de destino sem gerar um codigo de commit novo para essa mesclagem, isso evita a poluicao do repositoria com muitos commits de 
+				  mesclagem de branchs
+>>>>>>> glossario-git
 
 
 
