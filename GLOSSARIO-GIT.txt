@@ -132,6 +132,8 @@ git remote set-url nome_diretorio nova_url = este comando altera a url do direto
 
 git push origin/nome_servidor master =  este comando envia todo todo o conteudo do repositorio local para repositorio remoto no github ou em um servidor remoto
 
+git push origin/nome_servidor_remoto nome_branch = este comando cria um branch no github as alteracoes estao sendo enviadas para o reposotirio remoto
+
 git clone https://github.com/fulanodasilva/citacoes.git = este comando clona todo o conteudo que esta em um diretorio remoto no github para o seu diretorio local
 
 git pull nome_diretorio_remoto master = este comando sincroniza nosso repositorio local com o repositorio remoto para que possamos obter as ultimas atualizacoes e os
@@ -171,7 +173,6 @@ git branch -r = este comando lista todas as branchs remotas que estao pareadas c
 git branch -a =  este comando lista todas as branchs pareadas com o repositorio locao do git, tanto as remotas como as locais
 
 git branch -r -v = este comando mostra para quais commits a branch remota esta apontando
-
 
 
 
