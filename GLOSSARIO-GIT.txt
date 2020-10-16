@@ -166,6 +166,12 @@ git rebase nome_branch_alterada = este comando faz a mesclagem do que foi altera
 				  mesclagem de branchs
 >>>>>>> glossario-git
 
+git branch -r = este comando lista todas as branchs remotas que estao pareadas com o diretorio local do git
+
+git branch -a =  este comando lista todas as branchs pareadas com o repositorio locao do git, tanto as remotas como as locais
+
+git branch -r -v = este comando mostra para quais commits a branch remota esta apontando
+
 
 
 
