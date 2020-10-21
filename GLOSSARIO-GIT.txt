@@ -164,9 +164,9 @@ git merge nome_branch -m 'descricao do que esta sendo feito'  = este comando mes
 
 <<<<<<< HEAD
 =======
-git rebase nome_branch_alterada = este comando faz a mesclagem do que foi alterado em uma branch para a branch de destino sem gerar um codigo de commit novo para essa mesclagem, isso evita a poluicao do repositoria com muitos commits de 
-				  mesclagem de branchs
->>>>>>> glossario-git
+git rebase nome_branch_alterada = este comando faz a mesclagem do que foi alterado em uma branch para a branch de destino sem gerar um codigo de commit novo para essa mesclagem, 
+				  isso evita a poluicao do repositoria com muitos commits de mesclagem de branchs
+
 
 git branch -r = este comando lista todas as branchs remotas que estao pareadas com o diretorio local do git
 
