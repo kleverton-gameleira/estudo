@@ -162,11 +162,9 @@ git branch --no-merged = este comando retorna a lista das branch em que ocorrera
 
 git merge nome_branch -m 'descricao do que esta sendo feito'  = este comando mescla branch atual com a branch especificada
 
-<<<<<<< HEAD
-=======
-git rebase nome_branch_alterada = este comando faz a mesclagem do que foi alterado em uma branch para a branch de destino sem gerar um codigo de commit novo para essa mesclagem, isso evita a poluicao do repositoria com muitos commits de 
-				  mesclagem de branchs
->>>>>>> glossario-git
+git rebase nome_branch_alterada = este comando faz a mesclagem do que foi alterado em uma branch para a branch de destino sem gerar um codigo de commit novo para essa mesclagem, 
+				  isso evita a poluicao do repositoria com muitos commits de mesclagem de branchs
+
 
 git branch -r = este comando lista todas as branchs remotas que estao pareadas com o diretorio local do git
 
@@ -179,9 +177,6 @@ git checkout -b nome_branch_remota origin/nome_branch_remota  = este comando cri
 git checkout -t origin/nome_branch_remota = este comando cria uma branch no repositorio local identica a branch remoto citada no comando.
 
 git fecth origin = este comando traz os commits de uma branch remota que ainda nao estao disponoveis em nosso repositorio local
-
-
-
 
 
 
