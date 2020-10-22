@@ -185,6 +185,26 @@ git branch -D nome_branch = este comando deleta a branch especificada do diretor
 git push origin :nome_branch = este comando deleta a branch especificada tanto do repositorio local como do repositorio remoto ao mesmo tempo
 
 
+************ TAGS **************
+
+TAGS: sao um retrato do momento atual do repositorio
+
+git tag nome_tag. Ex:. v1.0 = este comando cria uma tag no repositorio com o nome especificado no comado
+
+git tag = este comado retorna uma lista com todas as tag que ja foram criadas no repositorio ate o momento
+
+git tag nome_tag 22233445 = este comando cria uma tag nova no reposiotorio com o nome especificado no comado e que aponta para o commit espeficado no comando
+
+git tag -d nome_tag = esta comando exclui do repositorio um tag cria anteriores
+
+git tag -a -m 'descricao da tag criada'  =  este comando cria um tag comentada no repositorio local
+
+git show -s nome_tag = este comando retorna as tags anotadas criadas com informacoes(metadados) dessas tags
+
+git push origin nome_tag = este comando enviar as alteracoes no repositorio local para o repositorio remoto ja com as tags criandas inclusas
+
+
+
 
 
 ***** SERVIÇOS WEB PARA A HOSPEDAGEM DE PROJETOS
