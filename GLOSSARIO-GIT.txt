@@ -203,6 +203,8 @@ git show -s nome_tag = este comando retorna as tags anotadas criadas com informa
 
 git push origin nome_tag = este comando enviar as alteracoes no repositorio local para o repositorio remoto ja com as tags criandas inclusas
 
+git push origin --tags = este comando enviar para o repositorio remoto todas as tags que existem no reposotorio local de uma vez so
+
 
 
 
