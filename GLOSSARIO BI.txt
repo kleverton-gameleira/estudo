@@ -6,6 +6,15 @@ TABELA FATO: esta tabela armazenas as medidas que seram calculadas, ela represen
 
 TABELA DIMENSAO: esta tabela contem todos os dados que qualificam o fato, sao as visoes pelas quais nos queremos analisar o fato ocorrido
 
+
+LATENCIA: trata-se do tempo ocorrido entre as cargas feitas no DW, ou seja, o tempo que se passa entre um carga e outra. EX:. D-1(carga de um dia), H-12(carga de 12 em 12 horas)
+
+BENCHMARK: trata-se de levantar informação sobre como o processo e feito atualmente, ou seja, como o processo ao qual esta se buscando melhoria e realizado sem a solucao porposta.
+
+MATRIZ DE FATOS E DIMENSOES(MFD): documento que cobre todos os pontos que seram apresentandos na plaraforma de BI, serve para definir o escopo do projeto
+
+
+
 ******* TIPOS DE DIMENSOES ********
 
 DIMENSAO HIERARQUICA PAI-FILHO: é a definicao de qual é o menor nivel de visualizacao de dados que o nosso usuario precisa analisar a informação, esse tipo de hierarquia
